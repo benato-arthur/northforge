@@ -18,3 +18,53 @@
     font-family: 'Inter', serif;
     src: url(../fonts/Inter-Variable.ttf);
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #101214;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    img{
+        width: 20%;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 40px;
+        list-style: none;
+        margin-right: 50px;
+        li{
+            a{
+                text-decoration: none;
+                font-family: 'Inter', serif;
+                font-weight: 400;
+                color: #F2EEE6;
+                padding: 8px 20px;
+                display: inline-block;
+            }
+        }
+        a.botao-receber-novidades{
+            border: 2px solid #D5A26F;
+            border-radius: 3px;
+            padding: 8px 12px;
+        }
+        li:hover{
+            background-color: #777B80;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+            zoom: 1.05;
+        }
+        .botao-receber-novidades:hover{
+            background-color: #D5A26F;
+            color: #101214;
+        }
+    }
+}
