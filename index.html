@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./northforge-simbolo.svg" type="image/svg+xml">
+    <title>Northforge</title>
+</head>
+<body>
+    <!--CABEÇALHO-->
+    <header>
+        <img src="./logos/northforge-logo-fundo-escuro.svg" alt="Logo da Northforge">
+        <nav>
+            <ul>
+                <li><a href="#pagina-hero">O Jogo</a></li>
+                <li><a href="#nosso-primeiro-universo">O Estúdio</a></li>
+                <li><a href="#alem-do-horizonte">Galeria</a></li>
+                <li class="botao-receber-novidades"><a href="#receba-novidades">Receber Novidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--PRINCIPAL-->
+    <main>
+
+        <!--HERO-->
+        <section class="pagina-hero" id="pagina-hero">
+            <h3>ESTÚDIO INDEPENDENTE DE JOGOS</h3>
+            <h1>Forjamos mundos. Você escreve a lenda.</h1>
+            <p>Jogos de fantasia sombria para quem busca mais do que uma aventura.</p>
+            <button>Explore o Jogo</button>
+            <button>Conheça o Estúdio</button>
+        </section>
+        
+        <!--NOSSO PRIMEIRO UNIVERSO--> 
+        <section class="nosso-primeiro-universo" id="nosso-primeiro-universo">
+            <img src="./img/jogo-catedral.webp" alt="Interior de Catedral destruído">
+            <div class="card-nosso-primeiro-universo">
+                <h3>NOSSO PRIMEIRO UNIVERSO</h3>
+                <h2>Ecos do Abismo</h2>
+                <p>Em um reino esquecido, cada escolha deixa uma cicatriz.</p>
+                <p>Explore ruínas e descubra o preço de manter a última chama acesa</p>
+                <ul>
+                    <li>RPG de ação</li>
+                    <li>Single-player</li>
+                    <li>PC</li>
+                </ul>
+                <button><img src="./icons/play.svg" alt="Botão de play">Ver trailer</button>
+            </div>
+        </section>
+        <hr>
+        
+        <!--A ESSÊNCIA NORTHFORGE-->   
+        <section class="a-essencia-northforge" id="a-essencia-northforge">
+            <h3>A ESSÊNCIA NORTHFORGE</h3>
+            <h2>Toda lenda começa com uma escolha.</h2>
+            <div class="card-a-essencia-northforge">
+                <div class="card-espada">
+                    <img src="./icons/espada.svg" alt="Espada dourada ícone">
+                    <h3>Escolhas com peso</h3>
+                    <p>Suas decisões transformam o caminho.</p>
+                </div> 
+                <div class="card-bussola">
+                    <img src="./icons/bussola.svg" alt="Bússola dourada ícone">
+                    <h3>Mundos para descobrir</h3>
+                    <p>Cada ruína guarda uma história.</p>
+                </div> 
+                <div class="card-bigorna">
+                    <img src="./icons/bigorna.svg" alt="Bigorna dourada ícone">
+                    <h3>Feito com paixão</h3>
+                    <p>Um estúdio pequeno. Uma visão ambiciosa.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <!--ALÉM DO HORIZONTE-->
+        <section class="alem-do-horizonte" id="alem-do-horizonte">
+            <h3>ALÉM DO HORIZONTE</h3>
+            <h2>Um mundo à espera de ser explorado.</h2>
+            <div class="card-imagens">
+                <figure>
+                    <img src="./img/galeria-floresta-ecos.webp" alt="Floresta com ruínas e uma néoa tênue">
+                    <figcaption>Floresta dos Ecos</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/galeria-cidadela-esquecida.webp" alt="Reino em cima das montanhas">
+                    <figcaption>Cidadela Esquecida</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/galeria-forja-ancestral.webp" alt="Forja quente dentro das montanhas">
+                    <figcaption>Forja Ancestral</figcaption>
+                </figure>
+            </div>
+        </section>
+        <hr>
+
+        <!--IMPRESSÕES DA DEMO-->
+        <section class="impressoes-demo" id="impressoes-demo">
+            <h3>IMPRESSÕES DA DEMO | EXEMPLOS FICTÍCIOS</h3>
+            <h2>Histórias que ficam com você.</h2>
+            <div class="card-relatos">
+                <div class="card-marina">
+                    <img src="./icons/aspas.svg" alt="Aspas">
+                    <p>"A atmosfera prende você desde o primeiro passo."</p>
+                    <p>Marina | Jogadora</p>
+                </div>
+                <div class="card-lucas">
+                    <img src="./icons/aspas.svg" alt="Aspas">
+                    <p>"Cada escolha parece carregar uma consequência."</p>
+                    <p>Lucas | Jogador</p>
+                </div>
+            </div>
+            <div id="receba-novidades" class="receba-novidades">
+                <div class="entre-para-proxima-jornada">
+                    <hr>
+                    <h2>Entre para a próxima jornada.</h2>
+                    <p>Receba novidades sobre o jogo e os bastidores do estúdio.</p>
+                </div>
+                <form>
+                    <label for="email">Seu e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+                    <button type="submit">Quero novidades</button>
+                    <p>Sem spam. Apenas novos capítulos</p>
+                </form>
+            </div>
+        </section>
+        <hr>
+    </main>
+
+    <!--RODAPÉ-->
+    <footer>
+        <img src="./logos/northforge-logo-fundo-escuro.svg" alt="Logo da Northforge">
+        <p>Estúdio fictício | Projeto para prática de front-end</p>
+    </footer>
+</body>
+</html>

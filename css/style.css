@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond', serif;
+    src: url(../fonts/CormorantGaramond-Variable.ttf);
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond Italic', serif;
+    src: url(../fonts/CormorantGaramond-Italic-Variable.ttf);
+}
+
+@font-face {
+    font-family: 'Inter', serif;
+    src: url(../fonts/Inter-Variable.ttf);
+}

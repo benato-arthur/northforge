@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" color="#D5A26F" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="espada-title">
+  <title id="espada-title">Espada</title>
+  <path d="M32 5l5 8-1 29h-8l-1-29zM32 12v29M22 42h20v4H22zM29 46v10h6V46M29 50h6M29 53h6"/>
+  <circle cx="32" cy="59" r="2.5"/>
+</svg>
