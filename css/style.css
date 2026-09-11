@@ -115,7 +115,7 @@ main{
                 font-size: 28px;
                 font-weight: 300;
                 letter-spacing: 2px;
-                margin-top: 1vh;
+                margin-top: 2vh;
                 width: 100%;
                 max-width: 40ch;
             }
@@ -123,7 +123,7 @@ main{
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
-                margin-top: 5vh;
+                margin-top: 6vh;
                 .dourado{
                     color: #101214da;
                     background-color: #D5A26F;
