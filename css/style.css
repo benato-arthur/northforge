@@ -92,14 +92,14 @@ main{
         .card-hero{
             display: flex;
             flex-direction: column;
-            margin-left: 2vw;
+            margin-left: 4vw;
             h3{
                 color: #D5A26F;
                 font-family: 'Inter', serif;
                 font-weight: 500;
                 letter-spacing: 4px;
                 word-spacing: 4px;
-                margin-top: 18vh;
+                margin-top: 22vh;
             }
             h1{
                 color: #F2EEE6;
@@ -115,7 +115,7 @@ main{
                 font-size: 28px;
                 font-weight: 300;
                 letter-spacing: 2px;
-                margin-top: 2vh;
+                margin-top: 3vh;
                 width: 100%;
                 max-width: 40ch;
             }
@@ -155,7 +155,7 @@ main{
                         left: 150%;
                     }
                     .dourado:hover {
-                        transform: scale(1.03);
+                        transform: scale(1.1);
                         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
                     }
                 .transparente{
@@ -163,7 +163,7 @@ main{
                     font-family: 'Inter', serif;
                     font-weight: 500;
                     padding: 16px 84px;
-                    border: 1px solid #D5A26F;
+                    border: 2px solid #D5A26F;
                     border-radius: 5px;
                     text-decoration: none;
                     transition: all 0.2s ease-in-out;
