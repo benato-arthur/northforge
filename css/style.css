@@ -5,18 +5,18 @@
 }
 
 @font-face {
-    font-family: 'Cormorant Garamond', serif;
-    src: url(../fonts/CormorantGaramond-Variable.ttf);
+    font-family: 'Cormorant Garamond';
+    src: url(../fonts/CormorantGaramond-Variable.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Cormorant Garamond Italic', serif;
-    src: url(../fonts/CormorantGaramond-Italic-Variable.ttf);
+    font-family: 'Cormorant Garamond Italic';
+    src: url(../fonts/CormorantGaramond-Italic-Variable.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Inter', serif;
-    src: url(../fonts/Inter-Variable.ttf);
+    font-family: 'Inter';
+    src: url(../fonts/Inter-Variable.ttf) format('truetype');
 }
 
 ::-webkit-scrollbar {
@@ -59,6 +59,7 @@ header{
         }
         a.botao-receber-novidades{
             border: 2px solid #D5A26F;
+            font-weight: 500;
             border-radius: 3px;
             padding: 8px 12px;
         }
@@ -69,7 +70,10 @@ header{
         }
         .botao-receber-novidades:hover{
             background-color: #D5A26F;
-            color: #101214;
+            color: #101214da;
+            box-shadow: 0 0 10px #D5A26F,
+                        0 0 20px #D5A26F, 
+                        0 0 30px rgba(213, 162, 111, 0.6);
         }
     }
 }
@@ -78,19 +82,100 @@ main{
     background-color: #101214;
     .pagina-hero{
         max-width: 100%;
-        min-height: 100vh;
+        min-height: calc(100vh + 85px);
         background-image: url(../img/hero-castelo-viajante.webp);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding-top: 80px;
-        scroll-margin-top: 80px;
+        padding-top: 85px;
+        scroll-margin-top: 85px;
         .card-hero{
             display: flex;
             flex-direction: column;
+            margin-left: 2vw;
+            h3{
+                color: #D5A26F;
+                font-family: 'Inter', serif;
+                font-weight: 500;
+                letter-spacing: 4px;
+                word-spacing: 4px;
+                margin-top: 18vh;
+            }
+            h1{
+                color: #F2EEE6;
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 100px;
+                font-weight: 400;
+                width: 100%;
+                max-width: 18ch;
+            }
+            p{
+                color: #F2EEE6;
+                font-family: 'Inter', serif;
+                font-size: 28px;
+                font-weight: 300;
+                letter-spacing: 2px;
+                margin-top: 1vh;
+                width: 100%;
+                max-width: 40ch;
+            }
             .botoes-hero{
                 display: flex;
                 flex-direction: row;
+                gap: 10px;
+                margin-top: 5vh;
+                .dourado{
+                    color: #101214da;
+                    background-color: #D5A26F;
+                    font-family: 'Inter', serif;
+                    font-weight: 500;
+                    padding: 16px 84px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    transition: all 0.2s ease-in-out;
+                    overflow: hidden;
+                }
+                .dourado::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -220%;
+                        width: 50%;
+                        height: 100%;
+                        background: linear-gradient(
+                            to right,
+                            rgba(255, 255, 255, 0) 0%,
+                            rgba(255, 255, 255, 0.4) 50%,
+                            rgba(255, 255, 255, 0) 100%
+                        );
+                        transform: skewX(-25deg); /* Inclina a linha de luz */
+                        transition: all 0.6s ease;
+                    }
+                    .dourado:hover::before {
+                        left: 150%;
+                    }
+                    .dourado:hover {
+                        transform: scale(1.03);
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                    }
+                .transparente{
+                    color: #F2EEE6;
+                    font-family: 'Inter', serif;
+                    font-weight: 500;
+                    padding: 16px 84px;
+                    border: 1px solid #D5A26F;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    transition: all 0.2s ease-in-out;
+                    &:hover{
+                        color:#101214da;
+                        background-color: rgb(237, 179, 120);
+                        transform: scale(1.1);
+                        box-shadow: 0 0 10px #D5A26F,
+                                    0 0 20px #D5A26F, 
+                                    0 0 30px rgba(213, 162, 111, 0.6);
+                    }
+                }
             }
         }
         
