@@ -39,6 +39,7 @@ header{
     padding: 10px;
     position: fixed;
     width: 100%;
+    z-index: 3;
     img{
         width: 14%;
     }
@@ -101,7 +102,7 @@ main{
                 color: #D5A26F;
                 font-family: 'Inter', serif;
                 font-weight: 500;
-                letter-spacing: 4px;
+                letter-spacing: 5px;
                 word-spacing: 4px;
                 margin-top: 22vh;
             }
@@ -200,14 +201,14 @@ main{
                 font-size: 20px;
                 color: #d68d45eb;
                 letter-spacing: 2px;
-                word-spacing: 3px;
+                word-spacing: 4px;
             }
             h2{
                 font-family: 'Cormorant Garamond', serif;
                 font-weight: 400;
                 font-size: 80px;
                 color: #f2eee6d4;
-                word-spacing: 5px;
+                word-spacing: 4px;
             }
             .p1{
                 font-family: 'Cormorant Garamond', serif;
@@ -241,7 +242,124 @@ main{
                     border-radius: 5px;
                 }
             }
+            button{
+                display: flex;
+                width: 250px;
+                height: 50px;
+                background-color: transparent;
+                border: 2px solid #af6f2e;
+                border-radius: 3px;
+                color: #f2eee6cc;
+                font-family: 'Inter', serif;
+                font-size: 16px;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30px;
+                transition: all 200ms ease-in-out;
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+                }
+                img{
+                    width: 31px;
+                    transform: translateX(-10px);
+                }
+            }
         }
+    }
+    .a-essencia-northforge{
+        .titulo-a-essencia{
+            font-family: 'Inter', serif;
+            font-weight: 500;
+            font-size: 15px;
+            text-align: center;
+            margin-top: 70px;
+            color: #d68d45eb;
+            word-spacing: 4px;
+            letter-spacing: 2px;
+        }
+        h2{
+            text-align: center;
+            color: #F2EEE6;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 60px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        .card-a-essencia-northforge{
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin: 50px;
+            color: #F2EEE6;
+            img{
+                width: 90px;
+                margin-bottom: 20px;
+                transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+                filter: brightness(0.85);
+            }
+            h3{
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 30px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                transition: color 0.3s ease;
+            }
+            p{
+                font-family: 'Inter', serif;
+                font-size: 18px;
+                font-weight: 200;
+                color: #c9c5bd;
+                transition: color 0.3s ease;
+            }
+            .linha-vertical{
+                height: 200px;
+                border: 1px solid #2f3032;
+            }
+            .card-espada, .card-bussola, .card-bigorna {
+                transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+                cursor: pointer;
+                
+                &:hover {
+                    transform: translateY(-8px);
+                    
+                    img {
+                        transform: scale(1.08);
+                        filter: brightness(1.2) drop-shadow(0 0 12px rgba(214, 141, 69, 0.35));
+                    }
+                    h3 {
+                        color: #d68d45;
+                    }
+                    p {
+                        color: #F2EEE6;
+                    }
+                }
+            }
+            .card-espada{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                p{
+                    width: 22ch;
+                }
+            }
+            .card-bussola{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .card-bigorna{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                p{
+                    width: 20ch;
+                }
+            }
+        }    
     }
 }
 
