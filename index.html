@@ -104,41 +104,47 @@
 
         <!--IMPRESSÕES DA DEMO-->
         <section class="impressoes-demo" id="impressoes-demo">
-            <h3>IMPRESSÕES DA DEMO | EXEMPLOS FICTÍCIOS</h3>
-            <h2>Histórias que ficam com você.</h2>
+            <h3>IMPRESSÕES DA DEMO &middot; EXEMPLOS FICTÍCIOS</h3>
+            <h2 class="titulo-impressoes">Histórias que ficam com você.</h2>
             <div class="card-relatos">
                 <div class="card-marina">
                     <img src="./icons/aspas.svg" alt="Aspas">
-                    <p>"A atmosfera prende você desde o primeiro passo."</p>
-                    <p>Marina | Jogadora</p>
+                    <div class="relatos">
+                        <p>"A atmosfera prende você desde o primeiro passo."</p>
+                        <p class="marina">Marina &middot; Jogadora</p>
+                    </div> 
                 </div>
                 <div class="card-lucas">
                     <img src="./icons/aspas.svg" alt="Aspas">
-                    <p>"Cada escolha parece carregar uma consequência."</p>
-                    <p>Lucas | Jogador</p>
+                    <div class="relatos">
+                        <p>"Cada escolha parece carregar uma consequência."</p>
+                        <p class="lucas">Lucas &middot; Jogador</p>
+                    </div>
                 </div>
             </div>
             <div id="receba-novidades" class="receba-novidades">
                 <div class="entre-para-proxima-jornada">
-                    <hr>
+                    <hr class="linha-dourada">
                     <h2>Entre para a próxima jornada.</h2>
                     <p>Receba novidades sobre o jogo e os bastidores do estúdio.</p>
                 </div>
                 <form>
                     <label for="email">Seu e-mail</label>
-                    <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
-                    <button type="submit">Quero novidades</button>
-                    <p>Sem spam. Apenas novos capítulos</p>
+                    <div class="form-linha">
+                        <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+                        <button type="submit">Quero novidades</button>
+                    </div>
+                    <p>Sem spam. Apenas novos capítulos.</p>
                 </form>
             </div>
         </section>
-        <hr>
+        <hr class="ultima-linha">
     </main>
 
     <!--RODAPÉ-->
     <footer>
         <img src="./logos/northforge-logo-fundo-escuro.svg" alt="Logo da Northforge">
-        <p>Estúdio fictício | Projeto para prática de front-end</p>
+        <p>Estúdio fictício &middot; Projeto para prática de front-end</p>
     </footer>
 </body>
 </html>
