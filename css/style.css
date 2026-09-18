@@ -603,3 +603,18 @@ footer{
         color: #B5B0A8;
     }
 }
+
+@media (max-width: 1023px) {
+    header{
+        width: 100%;
+        nav{
+            ul{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+}
