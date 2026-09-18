@@ -40,6 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const formNewsletter = document.querySelector('#receba-novidades form');
+    const inputEmail = document.getElementById('email');
+    const msgNewsletter = document.getElementById('mensagem-newsletter');
+
+    if (formNewsletter && inputEmail && msgNewsletter) {
+        formNewsletter.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailRegex.test(inputEmail.value)) {
+                msgNewsletter.textContent = "Simulação concluída. Nenhum dado foi enviado.";
+                msgNewsletter.style.color = "#a3e635";
+                inputEmail.style.borderColor = "";
+                inputEmail.value = "";
+            } else {
+                msgNewsletter.textContent = "Digite um e-mail válido.";
+                msgNewsletter.style.color = "#f87171";
+                inputEmail.style.borderColor = "#f87171";
+            }
+        });
+    }
+
     const botaoTrailer = document.querySelector('.card-nosso-primeiro-universo button'); 
     const modal = document.getElementById('modal-trailer'); 
     const botaoFechar = document.querySelector('.botao-fechar'); 
