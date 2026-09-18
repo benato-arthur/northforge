@@ -605,16 +605,711 @@ footer{
 }
 
 @media (max-width: 1023px) {
-    header{
+    header {
         width: 100%;
-        nav{
-            ul{
-                display: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        box-sizing: border-box;
+
+        img {
+            width: 45%;
+        }
+
+        nav {
+            position: relative;
+
+            &::before {
+                content: url(../icons/menu.svg);
+                display: block;
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
             }
+
+            ul {
+                display: flex !important;
+                flex-direction: column !important;
+                position: absolute !important;
+                top: 50px;
+                right: 0;
+                width: 200px;
+                background-color: #101214;
+                padding: 25px 15px;
+                gap: 15px;
+                border: 1px solid #2f3032;
+                border-radius: 4px;
+                margin-right: 0;
+                z-index: 10;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(-15px) scale(0.95);
+                transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                            visibility 0.3s;
+
+                &.ativo {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0) scale(1);
+                    pointer-events: auto;
+                }
+
+                li {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+
+                    a {
+                        width: 100%;
+                        padding: 10px 0;
+                        margin: 0;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+
+                a.botao-receber-novidades {
+                    width: 100%;
+                    display: block;
+                    padding: 10px 0;
+                    margin: 5px 0 0 0;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    main {
+        width: 100%;
+
+        .pagina-hero {
+            background-image: url(../img/mobile/hero-mobile.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+
+            .card-hero {
+                margin-left: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 0 20px;
+
+                h1 {
+                    font-size: 48px;
+                    max-width: 100%;
+                }
+
+                p {
+                    font-size: 20px;
+                    max-width: 100%;
+                }
+
+                .botoes-hero {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 15px;
+
+                    .dourado, .transparente {
+                        width: 100%;
+                        padding: 14px 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .nosso-primeiro-universo {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #0e0f11;
+            width: 100%;
+            box-sizing: border-box;
+
+            .catedral-destruida {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                margin-bottom: 30px;
+                float: none;
+            }
+
+            .card-nosso-primeiro-universo {
+                width: 100%;
+                max-width: 600px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding: 0;
+                box-sizing: border-box;
+
+                h2 {
+                    font-size: 48px;
+                }
+
+                .p1 {
+                    font-size: 28px;
+                    width: 100%;
+                }
+
+                .p2 {
+                    font-size: 18px;
+                    width: 100%;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    padding: 0;
+                    list-style: none;
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        .a-essencia-northforge {
+            padding: 40px 20px;
+            background-color: #0e0f11;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center; 
+
+            h2 {
+                font-size: 36px;
+                line-height: 1.3;
+                max-width: 90%;
+                margin: 0 auto 30px auto;
+                color: #ffffff;
+            }
+
+            .titulo-a-essencia {
+                font-size: 14px;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
+            }
+
+            .card-a-essencia-northforge {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                width: 100%;
+                margin: 0;
+
+                .card-espada, .card-bussola, .card-bigorna {
+                    width: 100%;
+                    max-width: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    p {
+                        width: 100%;
+                    }
+                }
+
+                .linha-vertical {
+                    display: none;
+                }
+            }
+        }
+
+        .impressoes-demo {
+            padding: 40px 20px;
+            background-color: #0e0f11;
+            width: 100%;
+            box-sizing: border-box;
+
+            .titulo-impressoes {
+                font-size: 36px;
+            }
+
+            .card-relatos {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+                margin: 30px 0;
+
+                .card-marina, .card-lucas {
+                    width: 100%;
+                    max-width: 100%;
+                    box-sizing: border-box;
+                    padding: 30px;
+
+                    img {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .receba-novidades {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                text-align: center;
+                padding: 60px 20px;
+                background-color: #0e0f11;
+                color: #ffffff;
+                box-sizing: border-box;
+                width: 100%;
+                height: auto;
+                margin: 30px auto;
+
+                .entre-para-proxima-jornada {
+                    h2 {
+                        font-size: 36px;
+                    }
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                    width: 100%;
+                    max-width: 450px;
+                    margin: 0 auto;
+
+                    label {
+                        color: #ffffff;
+                        font-size: 14px;
+                    }
+
+                    .form-linha {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        width: 100%;
+
+                        input[type="email"] {
+                            width: 100%;
+                            background-color: #0e0f11;
+                            color: #ffffff;
+                            border: 1px solid #333333;
+                            padding: 12px;
+                            box-sizing: border-box;
+                            border-radius: 4px;
+                        }
+
+                        button {
+                            width: 100%;
+                            padding: 12px;
+                            box-sizing: border-box;
+                            background-color: #d4a373;
+                            color: #000000;
+                            border: none;
+                            cursor: pointer;
+                            font-weight: bold;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+
+            .ultima-linha, hr {
+                display: block;
+                width: 100%;
+                border: none;
+                border-top: 1px solid #222222;
+                height: 1px;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+        padding: 40px 20px;
+        background-color: #0e0f11;
+        width: 100%;
+        box-sizing: border-box;
+        clear: both;
+        img {max-width: 160px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        p {
+            width: 100%;
+            max-width: 280px;
+            font-size: 12px;
+            color: #888888;
+            line-height: 1.4;
+            margin: 0 auto;
         }
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 375px) {
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        box-sizing: border-box;
+        background-color: #101214;
 
+        img {
+            width: auto;
+            max-width: 130px;
+            display: block;
+        }
+
+        nav {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: url(../icons/menu.svg);
+                display: block;
+                cursor: pointer;
+                width: 26px;
+                height: 26px;
+            }
+
+            ul {
+                display: flex !important;
+                flex-direction: column !important;
+                position: absolute !important;
+                top: 50px;
+                right: 0;
+                width: 200px;
+                background-color: #101214;
+                padding: 25px 15px;
+                gap: 15px;
+                border: 1px solid #2f3032;
+                border-radius: 4px;
+                margin-right: 0;
+                z-index: 10;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(-15px) scale(0.95);
+                transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                            visibility 0.3s;
+
+                &.ativo {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0) scale(1);
+                    pointer-events: auto;
+                }
+
+                li {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+
+                    a {
+                        width: 100%;
+                        padding: 10px 0;
+                        margin: 0;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+
+                a.botao-receber-novidades {
+                    width: 100%;
+                    display: block;
+                    padding: 10px 0;
+                    margin: 5px 0 0 0;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    main {
+        .pagina-hero {
+            padding-top: 100px;
+            align-items: flex-start;
+
+            .card-hero {
+                margin-left: 15px;
+                width: calc(100% - 30px);
+
+                h1 {
+                    font-size: 34px;
+                    max-width: 100%;
+                }
+
+                p {
+                    font-size: 16px;
+                    max-width: 100%;
+                }
+
+                .botoes-hero {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 12px;
+
+                    .dourado, .transparente {
+                        width: 100%;
+                        padding: 14px 0;
+                    }
+                }
+            }
+        }
+
+        .nosso-primeiro-universo {
+            flex-direction: column;
+            padding: 30px 15px;
+            gap: 20px;
+
+            .catedral-destruida {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+
+            .card-nosso-primeiro-universo {
+                width: 100%;
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                .p1 {
+                    font-size: 20px;
+                }
+
+                .p2 {
+                    font-size: 15px;
+                }
+
+                ul {
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 8px;
+
+                    li {
+                        padding: 8px 15px;
+                        font-size: 14px;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .a-essencia-northforge {
+            padding: 30px 15px;
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .card-a-essencia-northforge {
+                flex-direction: column;
+                gap: 35px;
+                margin-top: 30px;
+            }
+        }
+
+        .alem-do-horizonte {
+            padding: 30px 15px;
+
+            h2 {
+                font-size: 32px;
+                max-width: 100%;
+                margin-bottom: 25px;
+            }
+
+            .card-imagens {
+                flex-direction: column;
+                gap: 30px;
+                margin: 30px 0;
+
+                figure {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    img {
+                        width: 100%;
+                        max-width: 280px;
+                        height: auto;
+                        border-radius: 4px;
+                    }
+
+                    figcaption {
+                        font-size: 20px;
+                        margin-top: 12px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .card-relatos {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 15px;
+        }
+
+        .impressoes-demo {
+            .titulo-impressoes {
+                font-size: 28px;
+            }
+
+            .receba-novidades {
+                flex-direction: column;
+                padding: 30px 15px;
+                gap: 25px;
+                width: calc(100% - 30px);
+                margin: 30px auto;
+                height: auto;
+
+                .entre-para-proxima-jornada {
+                    h2 {
+                        font-size: 26px;
+                        text-align: center;
+                    }
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+
+                form {
+                    width: 100%;
+
+                    .form-linha {
+                        flex-direction: column;
+                        gap: 12px;
+                        width: 100%;
+
+                        input[type="email"], button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 30px 15px;
+        text-align: center;
+
+        img {
+            max-width: 1200px;
+            width: 130px;
+        }
+
+        p {
+            font-size: 12px;
+            margin-left: 0;
+        }
+    }
+}
+
+.modal-trailer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s;
+
+    &.visivel {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        .modal-conteudo {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    .modal-conteudo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.7);
+        width: 90%;
+        max-width: 700px;
+        background-color: #000000;
+        border: 2px solid #af6f2e;
+        border-radius: 6px;
+        padding: 5px;
+        box-sizing: border-box;
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        .botao-fechar {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            color: #ffffff;
+            font-size: 38px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .video-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+
+            video {
+                width: 100%;
+                height: auto;
+                max-height: 80vh;
+                object-fit: contain;
+                display: block;
+            }
+        }
+    }
 }
